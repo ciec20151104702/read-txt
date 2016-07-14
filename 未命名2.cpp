@@ -28,27 +28,35 @@ int main()
 	while(!(ptr[i]=='<'&&ptr[i+1]=='/'&&ptr[i+2]=='g'&&ptr[i+3]=='p'&&ptr[i+4]=='x'&&ptr[i+5]=='>'))
 	{
 		if(ptr[i]==' '&&ptr[i+1]=='l'&&ptr[i+2]=='a'&&ptr[i+3]=='t');
-		printf("");
-	
-	while(!((*(ptr+m)=='l')&&(*(ptr+m+1)=='a')&&(*(ptr+m+2)=='t')))
+		
+     	
+	while(!((*(ptr+n)=='l')&&(*(ptr+n+1)=='o')&&(*(ptr+n+2)=='n')))
 		{
-			m++;
+			n++;
 	
-		//printf("%d",m);
-		strncpy(lat,ptr+m+4,9);
-		lat[9]='\0';
-		printf("%s\n",lat);
-        strncpy(lon,ptr+m+17,10);
-        lon[10]='\0';
-        printf("%s\n",lon);
-        strncpy(date,ptr+m+33,10);
-        date[10]='\0';
-        printf("%s\n",date);
-        strncpy(time,ptr+m+44,8);
-        time[8]='\0';
-		printf("%s\n",time) ;
+		strncpy(lon,ptr+n+4,10);
+		lon[10]='\0';
+		printf("%s\n",lon);
+		
+	    }	
 	
+	while(!((*(ptr+j)=='d')&&(*(ptr+j+1)=='a')&&(*(ptr+j+2)=='t')&&(*(ptr+j+3)=='e')))
+		{
+			j++;
+	
+		strncpy(date,ptr+j+5,10);
+		date[10]='\0';
+		printf("%s\n",date);
+	    }
 	    
+	while(!((*(ptr+k)=='t')&&(*(ptr+k+1)=='i')&&(*(ptr+k+2)=='m')&&(*(ptr+k+3)=='e')))
+		{
+			k++;
+	
+		strncpy(time,ptr+k+5,8);
+		time[8]='\0';
+		printf("%s\n",time);
+	   }
 		fprintf(fp1,"%s,%s,%s,%s\n",lat,lon,date,time);
     }
 		fclose(fp1);
@@ -56,4 +64,4 @@ int main()
 		free(ptr);
         return 0;
 	}
-}
+
